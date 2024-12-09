@@ -1,0 +1,36 @@
+/* Загальний стиль для body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Висота на всю сторінку */
+    margin: 0; /* Відсутність відступів */
+    font-family: Arial, sans-serif; /* Шрифт для тексту */
+}
+
+/* Оформлення заголовка */
+h1 {
+    font-size: 24px; /* Розмір шрифту для заголовка */
+    margin-bottom: 30px; /* Відступ між заголовком і кнопкою */
+}
+
+/* Оформлення кнопки */
+button {
+    background-color: #6495ED; /* блакитний фон */
+    color: white; /* Білий колір тексту */
+    font-size: 16px; /* Розмір шрифту */
+    font-family: Arial, sans-serif; /* Шрифт */
+    border: 2px solid #87CEFA; /* Зелені обводки */
+    border-radius: 8px; /* Закруглені кути */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    cursor: pointer; /* Зміна курсору на "руку" */
+    transition: all 0.3s ease; /* Плавний перехід для всіх властивостей */
+}
+
+/* Ефект при наведенні */
+button:hover {
+    background-color: #87CEFA; /* Трохи темніший зелений фон */
+    border-color: #6495ED; /* Зміна кольору обводки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додавання тіні */
+}
