@@ -1,0 +1,128 @@
+/* Загальні стилі */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #87CEEB, #228B22);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Сцена */
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Фон */
+.arena {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #87CEEB, #228B22);
+    animation: background-change 6s infinite;
+}
+
+@keyframes background-change {
+    0%, 50% {
+        background: linear-gradient(to bottom, #87CEEB, #228B22); /* Нормальний фон */
+    }
+    50%, 100% {
+        background: linear-gradient(to bottom, #1C1C1C, #8B0000); /* Темний фон */
+    }
+}
+
+/* Сквіртл */
+.squirtle {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    animation: squirtle-move 6s infinite;
+}
+
+.squirtle img {
+    height: 150px;
+}
+
+.water-splash {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 20px;
+    height: 150px;
+    background: linear-gradient(to bottom, #00BFFF, transparent);
+    opacity: 0;
+    animation: water-attack 2s infinite;
+    z-index: 5;
+}
+
+@keyframes water-attack {
+    0%, 40%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Бульбазавр */
+.bulbasaur {
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+    animation: bulbasaur-move 6s infinite;
+}
+
+.bulbasaur img {
+    height: 150px;
+}
+
+.vine-whip {
+    position: absolute;
+    bottom: 20px;
+    left: -40px;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(to right, green, transparent);
+    opacity: 0;
+    animation: vine-attack 6s infinite;
+}
+
+@keyframes vine-attack {
+    0%, 40%, 100% {
+        opacity: 0;
+        transform: scale(0.5) translateX(0);
+    }
+    50%, 70% {
+        opacity: 1;
+        transform: scale(1.2) translateX(-200px);
+    }
+}
+
+/* Анімація руху */
+@keyframes squirtle-move {
+    0%, 40%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes bulbasaur-move {
+    0%, 90%, 100% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-20px);
+    }
+}
